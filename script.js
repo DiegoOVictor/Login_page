@@ -51,7 +51,7 @@ function mostrarMensagem() {
 
 
 
-    // 7. Se os campos estiverem preenchidos, exibe a mensagem de sucesso
+    // Se os campos estiverem preenchidos, exibe a mensagem de sucesso
     document.getElementById("mensagem").style.display = "block";
     document.querySelector('.second-column').style.display = "none";
 }
