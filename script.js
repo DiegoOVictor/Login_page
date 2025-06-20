@@ -20,41 +20,6 @@ function enviarEmail() {
         <button onclick="fecharMensagem()">Fechar</button>
     `;
 }
-
-// Registrar
-function mostrarMensagem() {
-     // Obtem os valores dos campos
-    const nome = document.getElementById("nome").value.trim();
-    const email = document.getElementById("email-registro").value.trim();
-    const senha = document.getElementById("senha-registro").value.trim();
-
-    // Verifica se todos os campos estão preenchidos
-    if (nome === "" || email === "" || senha === "") {
-        alert("Por favor, preencha todos os campos.");
-            return; 
-    }
-
-    const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-
-    // objeto para o novo usuário
-    const novoUsuario = {
-        nome: nome,
-        email: email,
-        senha: senha 
-    };
-
-    // novo usuário
-    usuarios.push(novoUsuario);
-
-    // Salva a lista atualizada de volta no localStorage
-    localStorage.setItem('usuarios', JSON.stringify(usuarios));
-
-
-
-    // Se os campos estiverem preenchidos, exibe a mensagem de sucesso
-    document.getElementById("mensagem").style.display = "block";
-    document.querySelector('.second-column').style.display = "none";
-}
 // Login
 
 function fazerLogin() {
